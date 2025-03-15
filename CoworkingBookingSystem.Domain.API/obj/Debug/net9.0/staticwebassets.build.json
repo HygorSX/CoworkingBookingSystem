@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "TAdxW+x25/WCoe422hEV2WWc3n8ZeaxZWzcpRVFRzL8=",
+  "Source": "CoworkingBookingSystem.Domain.API",
+  "BasePath": "_content/CoworkingBookingSystem.Domain.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

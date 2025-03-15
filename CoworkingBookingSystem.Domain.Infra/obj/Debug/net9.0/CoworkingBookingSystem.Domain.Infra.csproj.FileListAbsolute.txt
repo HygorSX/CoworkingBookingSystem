@@ -1,0 +1,15 @@
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.deps.json
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.AssemblyInfoInputs.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.AssemblyInfo.cs
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\refint\CoworkingBookingSystem.Domain.Infra.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\ref\CoworkingBookingSystem.Domain.Infra.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.csproj.AssemblyReference.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\Coworkin.53A41C7D.Up2Date

@@ -1,0 +1,12 @@
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\bin\Debug\net9.0\CoworkingBookingSystem.Domain.deps.json
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\bin\Debug\net9.0\CoworkingBookingSystem.Domain.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\bin\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.AssemblyInfo.cs
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\refint\CoworkingBookingSystem.Domain.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\ref\CoworkingBookingSystem.Domain.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.csproj.AssemblyReference.cache

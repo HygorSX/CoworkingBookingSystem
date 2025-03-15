@@ -1,0 +1,222 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Flunt/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.OpenApi/1.6.17": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "CoworkingBookingSystem.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "flunt": "2.0.5"
+        },
+        "compile": {
+          "bin/placeholder/CoworkingBookingSystem.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CoworkingBookingSystem.Domain.dll": {}
+        }
+      },
+      "CoworkingBookingSystem.Domain.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CoworkingBookingSystem.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CoworkingBookingSystem.Domain.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CoworkingBookingSystem.Domain.Infra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flunt/2.0.5": {
+      "sha512": "CMgq8FUYjkHzyZT3PhkUwZyy79mudON+EL4b0SAT7BfIOJ2CNypwnbdA0cPHAM2CYQfO2L8ubNJCiBHQOIv2pA==",
+      "type": "package",
+      "path": "flunt/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.2.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.2": {
+      "sha512": "JUndpjRNdG8GvzBLH/J4hen4ehWaPcshtiQ6+sUs1Bcj3a7dOsmWpDloDlpPeMOVSlhHwUJ3Xld0ClZjsFLgFQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/9.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.6.17": {
+      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.17.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
+    "CoworkingBookingSystem.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CoworkingBookingSystem.Domain/CoworkingBookingSystem.Domain.csproj",
+      "msbuildProject": "../CoworkingBookingSystem.Domain/CoworkingBookingSystem.Domain.csproj"
+    },
+    "CoworkingBookingSystem.Domain.Infra/1.0.0": {
+      "type": "project",
+      "path": "../CoworkingBookingSystem.Domain.Infra/CoworkingBookingSystem.Domain.Infra.csproj",
+      "msbuildProject": "../CoworkingBookingSystem.Domain.Infra/CoworkingBookingSystem.Domain.Infra.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "CoworkingBookingSystem.Domain >= 1.0.0",
+      "CoworkingBookingSystem.Domain.Infra >= 1.0.0",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Hygorsxx\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.API\\CoworkingBookingSystem.Domain.API.csproj",
+      "projectName": "CoworkingBookingSystem.Domain.API",
+      "projectPath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.API\\CoworkingBookingSystem.Domain.API.csproj",
+      "packagesPath": "C:\\Users\\Hygorsxx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.API\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Hygorsxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.Infra\\CoworkingBookingSystem.Domain.Infra.csproj": {
+              "projectPath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.Infra\\CoworkingBookingSystem.Domain.Infra.csproj"
+            },
+            "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[9.0.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

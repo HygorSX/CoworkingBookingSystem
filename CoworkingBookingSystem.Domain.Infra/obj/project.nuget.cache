@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EW03hGuwwTA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain.Infra\\CoworkingBookingSystem.Domain.Infra.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hygorsxx\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

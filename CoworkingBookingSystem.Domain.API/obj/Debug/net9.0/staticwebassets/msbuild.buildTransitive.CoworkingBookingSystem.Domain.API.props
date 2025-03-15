@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CoworkingBookingSystem.Domain.API.props" />
+</Project>

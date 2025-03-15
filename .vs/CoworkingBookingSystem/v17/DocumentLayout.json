@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EEF59E8-D5A2-4DAE-A791-D273B6A3C1A0}|CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj|c:\\users\\hygorsxx\\riderprojects\\coworkingbookingsystem\\coworkingbookingsystem.domain\\commands\\contracts\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEF59E8-D5A2-4DAE-A791-D273B6A3C1A0}|CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj|solutionrelative:coworkingbookingsystem.domain\\commands\\contracts\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EEF59E8-D5A2-4DAE-A791-D273B6A3C1A0}|CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj|c:\\users\\hygorsxx\\riderprojects\\coworkingbookingsystem\\coworkingbookingsystem.domain\\commands\\contracts\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEF59E8-D5A2-4DAE-A791-D273B6A3C1A0}|CoworkingBookingSystem.Domain\\CoworkingBookingSystem.Domain.csproj|solutionrelative:coworkingbookingsystem.domain\\commands\\contracts\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\Commands\\Contracts\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "CoworkingBookingSystem.Domain\\Commands\\Contracts\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\Commands\\Contracts\\CreateUserCommand.cs",
+              "RelativeToolTip": "CoworkingBookingSystem.Domain\\Commands\\Contracts\\CreateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:36:41.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ICommand.cs",
+              "DocumentMoniker": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\Commands\\Contracts\\ICommand.cs",
+              "RelativeDocumentMoniker": "CoworkingBookingSystem.Domain\\Commands\\Contracts\\ICommand.cs",
+              "ToolTip": "C:\\Users\\Hygorsxx\\RiderProjects\\CoworkingBookingSystem\\CoworkingBookingSystem.Domain\\Commands\\Contracts\\ICommand.cs",
+              "RelativeToolTip": "CoworkingBookingSystem.Domain\\Commands\\Contracts\\ICommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:36:40.338Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
