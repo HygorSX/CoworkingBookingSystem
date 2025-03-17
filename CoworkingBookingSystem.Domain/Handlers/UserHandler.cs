@@ -27,6 +27,9 @@ public class UserHandler :
         if(!command.IsValid)
             return new GenericCommandResult(false, "Ops, something went wrong!", command.Notifications);
         
+        if(_userRepository.GetByEmail(command.Email) != null)
+            return new GenericCommandResult(false, "Email already in use", null);
+        
         var user = new UserEntity(command.Name, command.Email, command.Password, command.Type);
         
         _userRepository.Create(user);

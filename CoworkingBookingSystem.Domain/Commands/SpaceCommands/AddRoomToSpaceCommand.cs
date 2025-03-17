@@ -23,6 +23,7 @@ public class AddRoomToSpaceCommand : Notifiable<Notification>, ICommand
             new Contract<Notification>()
                 .Requires()
                 .AreNotEquals(SpaceId, Guid.Empty, "SpaceId", "Invalid SpaceId.")
-                .IsNotNullOrEmpty(RoomName, "RoomName", "Room name cannot be empty."));
+                .IsNotNullOrWhiteSpace(RoomName, "RoomName", "Room name cannot be empty.")
+        );
     }
 }

@@ -56,6 +56,9 @@ public class SpaceHandler :
         if (space == null)
             return new GenericCommandResult(false, "Space not found", null);
         
+        if (space.Name == command.Name)
+            return new GenericCommandResult(false, "No changes detected", space);
+        
         space.UpdateName(command.Name);
         
         _spaceRepository.UpdateSpace(space);
@@ -75,6 +78,9 @@ public class SpaceHandler :
         if (space == null)
             return new GenericCommandResult(false, "Space not found", null);
         
+        if (space.Rooms.Any())
+            return new GenericCommandResult(false, "Cannot delete a space with existing rooms", null);
+        
         _spaceRepository.DeleteSpace(space);
         
         return new GenericCommandResult(true, "Space deleted!", space);
@@ -92,7 +98,11 @@ public class SpaceHandler :
         if (space == null)
             return new GenericCommandResult(false, "Space not found", null);
         
+        if (space.Rooms.Any(r => r.Name == command.RoomName))
+            return new GenericCommandResult(false, "Room with this name already exists", null);
+        
         var room = new RoomEntity(command.RoomName, space.Id);
+        
         space.AddRoom(room);
         
         _spaceRepository.UpdateSpace(space);
@@ -115,6 +125,9 @@ public class SpaceHandler :
         
         var room = space.Rooms.FirstOrDefault(r => r.Id == command.RoomId);
         
+        if (room == null)
+            return new GenericCommandResult(false, "Room not found", null);
+        
         space.RemoveRoom(room);
         
         _spaceRepository.UpdateSpace(space);
@@ -133,6 +146,11 @@ public class SpaceHandler :
         
         if (space == null)
             return new GenericCommandResult(false, "Space not found", null);
+        
+        var room = space.Rooms.FirstOrDefault(r => r.Id == command.RoomId);
+
+        if (room == null)
+            return new GenericCommandResult(false, "Room not found", null);
         
         space.UpdateRoom(command.RoomId, command.NewName);
         

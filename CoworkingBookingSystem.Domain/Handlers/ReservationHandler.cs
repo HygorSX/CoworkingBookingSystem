@@ -10,9 +10,11 @@ namespace CoworkingBookingSystem.Domain.Handlers;
 
 public class ReservationHandler : 
     Notifiable<Notification>,
-    IHandler<CreateReservation>,
-    IHandler<MarkReservationAsReserved>,
-    IHandler<MarkReservationAsCanceled>
+    IHandler<CreateReservationCommand>,
+    IHandler<UpdateReservationTimeCommand>,
+    IHandler<MarkReservationAsReservedCommand>,
+    IHandler<MarkReservationAsCanceledCommand>,
+    IHandler<MarkReservationAsCompletedCommand>
 {
     private readonly IUserRepository _userRepository;
     private readonly IRoomRepository _roomRepository;
@@ -25,7 +27,7 @@ public class ReservationHandler :
         _reservationRepository = reservationRepository;
     }
 
-    public ICommandResult Handle(CreateReservation command)
+    public ICommandResult Handle(CreateReservationCommand command)
     {
         command.Validate();
 
@@ -51,8 +53,35 @@ public class ReservationHandler :
         
         return new GenericCommandResult(true, "Reservation created", reservation);
     }
+    
+    public ICommandResult Handle(UpdateReservationTimeCommand command)
+    {
+        command.Validate();
 
-    public ICommandResult Handle(MarkReservationAsCanceled command)
+        if (!command.IsValid)
+            return new GenericCommandResult(false, "Ops, something went wrong!", command.Notifications);
+        
+        var user = _userRepository.GetById(command.UserId);
+        
+        if(user == null)
+            return new GenericCommandResult(false, "User not found", null);
+        
+        var reservation = _reservationRepository.GetReservationForUserById(command.ReservationId, command.UserId);
+    
+        if (reservation == null)
+            return new GenericCommandResult(false, "Reservation not found", null);
+
+        if (_reservationRepository.HasConflict(reservation.RoomId, command.NewStartTime, command.NewEndTime))
+            return new GenericCommandResult(false, "This room is already booked for this time", null);
+
+        reservation.UpdateTime(command.NewStartTime, command.NewEndTime);
+        
+        _reservationRepository.UpdateReservation(reservation);
+    
+        return new GenericCommandResult(true, "Reservation updated successfully", reservation);
+    }
+
+    public ICommandResult Handle(MarkReservationAsCanceledCommand command)
     {
         command.Validate();
 
@@ -83,7 +112,7 @@ public class ReservationHandler :
         }
     }
 
-    public ICommandResult Handle(MarkReservationAsReserved command)
+    public ICommandResult Handle(MarkReservationAsReservedCommand command)
     {
         command.Validate();
 
@@ -111,6 +140,36 @@ public class ReservationHandler :
         catch (Exception ex)
         {
             return new GenericCommandResult(true, ex.Message, reservation);
+        }
+    }
+    
+    public ICommandResult Handle(MarkReservationAsCompletedCommand command)
+    {
+        command.Validate();
+
+        if (!command.IsValid)
+            return new GenericCommandResult(false, "Ops, something went wrong!", command.Notifications);
+
+        var user = _userRepository.GetById(command.UserId);
+
+        if (user == null)
+            return new GenericCommandResult(false, "User not found", null);
+
+        var reservation = _reservationRepository.GetReservationForUserById(command.ReservationId, command.UserId);
+
+        if (reservation == null)
+            return new GenericCommandResult(false, "Reservation not found", null);
+
+        try
+        {
+            reservation.Conclued();
+            _reservationRepository.MarkReservationAsCompleted(command.ReservationId);
+        
+            return new GenericCommandResult(true, "Reservation marked as completed successfully", reservation);
+        }
+        catch (Exception ex)
+        {
+            return new GenericCommandResult(false, ex.Message, null);
         }
     }
 }

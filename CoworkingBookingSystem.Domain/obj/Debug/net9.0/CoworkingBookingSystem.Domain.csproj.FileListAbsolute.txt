@@ -10,3 +10,4 @@ C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Do
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\ref\CoworkingBookingSystem.Domain.dll
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain\obj\Debug\net9.0\CoworkingBookingSystem.Domain.sourcelink.json

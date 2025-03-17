@@ -4,12 +4,12 @@ using Flunt.Validations;
 
 namespace CoworkingBookingSystem.Domain.Commands.ReservationCommands;
 
-public class MarkReservationAsReserved : Notifiable<Notification>, ICommand
+public class MarkReservationAsCanceledCommand : Notifiable<Notification>, ICommand
 {
     public Guid UserId { get; set; }
     public Guid ReservationId { get; set; }
 
-    public MarkReservationAsReserved(Guid userId, Guid reservationId)
+    public MarkReservationAsCanceledCommand(Guid userId, Guid reservationId)
     {
         UserId = userId;
         ReservationId = reservationId;

@@ -28,4 +28,19 @@ public class FakeReservationRepository : IReservationRepository
     {
         return _reservations.FirstOrDefault(r => r.Id == reservationId && r.UserId == userId);
     }
+
+    public List<ReservationEntity> GetReservationsByUser(Guid UserId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<ReservationEntity> GetFutureReservationsForRoom(Guid RoomId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void MarkReservationAsCompleted(Guid ReservationId)
+    {
+        throw new NotImplementedException();
+    }
 }

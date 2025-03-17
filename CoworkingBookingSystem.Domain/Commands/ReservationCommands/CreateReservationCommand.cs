@@ -5,7 +5,7 @@ using Flunt.Validations;
 
 namespace CoworkingBookingSystem.Domain.Commands.ReservationCommands;
 
-public class CreateReservation : Notifiable<Notification>, ICommand                         
+public class CreateReservationCommand : Notifiable<Notification>, ICommand                         
 {
     public Guid UserId { get; set; }
     public Guid RoomId { get; set; }
@@ -13,13 +13,12 @@ public class CreateReservation : Notifiable<Notification>, ICommand
     public DateTime EndTime { get; set; }
     public EReservationStatus Status { get; set; }
 
-    public CreateReservation(Guid userId, Guid roomId, DateTime startTime, DateTime endTime, EReservationStatus status)
+    public CreateReservationCommand(Guid userId, Guid roomId, DateTime startTime, DateTime endTime)
     {
         UserId = userId;
         RoomId = roomId;
         StartTime = startTime;
         EndTime = endTime;
-        Status = EReservationStatus.Pending;          
     }
 
 

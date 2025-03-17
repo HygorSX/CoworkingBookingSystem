@@ -24,7 +24,7 @@ public class UpdateRoomToSpaceCommand : Notifiable<Notification>, ICommand
                 .Requires()
                 .AreNotEquals(SpaceId, Guid.Empty, "SpaceId", "Space ID is required")
                 .AreNotEquals(RoomId, Guid.Empty, "RoomId", "Room ID is required")
-                .IsNotNullOrEmpty(NewName, "NewName","Room name cannot be empty.")
+                .IsNotNullOrWhiteSpace(NewName, "NewName","Room name cannot be empty.")
         );
     }
 }

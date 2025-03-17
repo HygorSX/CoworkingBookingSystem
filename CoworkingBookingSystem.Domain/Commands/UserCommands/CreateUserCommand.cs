@@ -27,7 +27,7 @@ public class CreateUserCommand : Notifiable<Notification>, ICommand
         AddNotifications(
             new Contract<Notification>()
                 .Requires()
-                .IsNotNullOrEmpty(Name, "Name", "Name is required")
+                .IsNotNullOrWhiteSpace(Name, "Name", "Name is required")
                 .IsEmail(Email, "Email", "Invalid email")
                 .IsGreaterThan(Password, 5, "Password", "Password must have at least 6 characters")
         );

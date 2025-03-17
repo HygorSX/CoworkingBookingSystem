@@ -12,6 +12,11 @@ public class FakeUserRepository : IUserRepository
         return _users.FirstOrDefault(u => u.Id == userId);
     }
 
+    public UserEntity GetByEmail(string email)
+    {
+        throw new NotImplementedException();
+    }
+
     public void Create(UserEntity user)
     {
         _users.Add(user);

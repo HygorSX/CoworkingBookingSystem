@@ -5,14 +5,14 @@ namespace CoworkingBookingSystem.Domain.Tests.CommandTests.ReservationCommandTes
 [TestClass]
 public sealed class MarkReservationAsCanceledCommandTests
 {
-    private MarkReservationAsCanceled _invalidCommand;
-    private MarkReservationAsCanceled _validCommand;
+    private MarkReservationAsCanceledCommand _invalidCommand;
+    private MarkReservationAsCanceledCommand _validCommand;
 
     [TestInitialize]
     public void Setup()
     {
-        _invalidCommand = new MarkReservationAsCanceled(Guid.Empty, Guid.Empty);
-        _validCommand = new MarkReservationAsCanceled(Guid.NewGuid(), Guid.NewGuid());
+        _invalidCommand = new MarkReservationAsCanceledCommand(Guid.Empty, Guid.Empty);
+        _validCommand = new MarkReservationAsCanceledCommand(Guid.NewGuid(), Guid.NewGuid());
     }
 
     [TestMethod]

@@ -172,3 +172,4 @@ C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Do
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Tests\bin\Debug\net9.0\Flunt.dll
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Tests\bin\Debug\net9.0\CoworkingBookingSystem.Domain.dll
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Tests\bin\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Tests\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Tests.sourcelink.json

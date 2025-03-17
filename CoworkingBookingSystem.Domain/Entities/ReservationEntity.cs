@@ -59,6 +59,14 @@ public class ReservationEntity : Entity
         Status = EReservationStatus.Empty;
     }
     
+    public void Conclued()
+    {
+        if (this.Status == EReservationStatus.Conclued)
+            throw new InvalidOperationException("This reservation is already marked as completed.");
+
+        this.Status = EReservationStatus.Conclued;
+    }
+    
     public bool ConflictsWith(DateTime startTime, DateTime endTime)
     {
         return startTime < EndTime && endTime > StartTime;
@@ -67,5 +75,11 @@ public class ReservationEntity : Entity
     public bool IsWithinAllowedPeriod()
     {
         return StartTime.Date >= DateTime.UtcNow.Date && StartTime.Date <= DateTime.UtcNow.Date.AddDays(30);
+    }
+
+    public void UpdateTime(DateTime commandNewStartTime, DateTime commandNewEndTime)
+    {
+        StartTime = commandNewStartTime;
+        EndTime = commandNewEndTime;
     }
 }

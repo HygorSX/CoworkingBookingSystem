@@ -23,6 +23,7 @@ public class CreateSpaceCommand : Notifiable<Notification>, ICommand
         AddNotifications(
             new Contract<Notification>()
                 .Requires()
-                .IsNotNullOrEmpty(Name, "Name","Space name cannot be empty."));
+                .IsNotNullOrEmpty(Name, "Name","Space name cannot be empty.")
+        );
     }
 }

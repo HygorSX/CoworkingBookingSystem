@@ -22,7 +22,8 @@ public class UpdateSpaceCommand : Notifiable<Notification>, ICommand
         AddNotifications(
             new Contract<Notification>()
                 .Requires()
-                .IsNotNullOrEmpty(Name, "Name", "Name cannot be empty.")
-                .AreNotEquals(SpaceId, Guid.Empty, "SpaceId", "Space ID is required"));
+                .IsNotNullOrWhiteSpace(Name, "Name", "Name cannot be empty.")
+                .AreNotEquals(SpaceId, Guid.Empty, "SpaceId", "Space ID is required")
+        );
     }
 }

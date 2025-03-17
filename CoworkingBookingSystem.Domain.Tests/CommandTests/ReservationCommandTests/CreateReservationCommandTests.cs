@@ -6,14 +6,14 @@ namespace CoworkingBookingSystem.Domain.Tests.CommandTests.ReservationCommandTes
 [TestClass]
 public sealed class CreateReservationCommandTests
 {
-    private CreateReservation _invalidCommand;
-    private CreateReservation _validCommand;
+    private CreateReservationCommand _invalidCommand;
+    private CreateReservationCommand _validCommand;
 
     [TestInitialize]
     public void Setup()
     {
-        _invalidCommand = new CreateReservation(Guid.Empty, Guid.Empty, DateTime.Now, DateTime.Now.AddHours(-1), EReservationStatus.Pending);
-        _validCommand = new CreateReservation(Guid.NewGuid(), Guid.NewGuid(), DateTime.Now, DateTime.Now.AddHours(2), EReservationStatus.Pending);
+        _invalidCommand = new CreateReservationCommand(Guid.Empty, Guid.Empty, DateTime.Now, DateTime.Now.AddHours(-1));
+        _validCommand = new CreateReservationCommand(Guid.NewGuid(), Guid.NewGuid(), DateTime.Now, DateTime.Now.AddHours(2));
     }
 
     [TestMethod]
