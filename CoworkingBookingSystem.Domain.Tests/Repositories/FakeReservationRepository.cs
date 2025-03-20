@@ -16,30 +16,22 @@ public class FakeReservationRepository : IReservationRepository
         throw new NotImplementedException();
     }
 
-    public bool HasConflict(Guid commandRoomId, DateTime commandStartTime, DateTime commandEndTime)
-    {
-        return _reservations.Any(reservation =>
-            reservation.RoomId == commandRoomId &&
-            reservation.StartTime < commandEndTime && 
-            reservation.EndTime > commandStartTime);
-    }
-
     public ReservationEntity GetReservationForUserById(Guid reservationId, Guid userId)
     {
         return _reservations.FirstOrDefault(r => r.Id == reservationId && r.UserId == userId);
     }
 
-    public List<ReservationEntity> GetReservationsByUser(Guid UserId)
+    public IEnumerable<ReservationEntity> GetReservationsByUser(Guid UserId)
     {
         throw new NotImplementedException();
     }
 
-    public List<ReservationEntity> GetFutureReservationsForRoom(Guid RoomId)
+    public IEnumerable<ReservationEntity> GetFutureReservationsForRoom(Guid RoomId)
     {
         throw new NotImplementedException();
     }
 
-    public void MarkReservationAsCompleted(Guid ReservationId)
+    public IEnumerable<ReservationEntity> GetConflictingReservationsForRoom(Guid RoomId, DateTime StartTime, DateTime EndTime)
     {
         throw new NotImplementedException();
     }

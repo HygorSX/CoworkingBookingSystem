@@ -26,7 +26,7 @@ public class ReservationEntity : Entity
         if(endTime <= startTime)
             throw new ArgumentException("The end time must be greater than the start time.");
         
-        if (startTime < DateTime.UtcNow.Date)
+        if (startTime < DateTime.UtcNow)
             throw new ArgumentException("Reservations cannot be made in the past.");
         
         if (startTime.Date > DateTime.UtcNow.Date.AddDays(30))
@@ -67,9 +67,9 @@ public class ReservationEntity : Entity
         this.Status = EReservationStatus.Conclued;
     }
     
-    public bool ConflictsWith(DateTime startTime, DateTime endTime)
+    public bool ConflictsWith(List<ReservationEntity> existingReservations, DateTime startTime, DateTime endTime)
     {
-        return startTime < EndTime && endTime > StartTime;
+        return existingReservations.Any(r => r.StartTime < endTime && r.EndTime > startTime);
     }
     
     public bool IsWithinAllowedPeriod()

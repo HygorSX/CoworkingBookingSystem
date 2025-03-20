@@ -44,7 +44,9 @@ public class ReservationHandler :
         if(room == null)
             return new GenericCommandResult(false, "Room not found", null);
         
-        if (_reservationRepository.HasConflict(command.RoomId, command.StartTime, command.EndTime))
+        var existingReservations = _reservationRepository.GetConflictingReservationsForRoom(command.RoomId, command.StartTime, command.EndTime);
+        
+        if (existingReservations.Any())
             return new GenericCommandResult(false, "This room is already booked for this time", null);
         
         var reservation = new ReservationEntity(command.UserId, room.SpaceId, command.RoomId, command.StartTime, command.EndTime);
@@ -71,7 +73,9 @@ public class ReservationHandler :
         if (reservation == null)
             return new GenericCommandResult(false, "Reservation not found", null);
 
-        if (_reservationRepository.HasConflict(reservation.RoomId, command.NewStartTime, command.NewEndTime))
+        var existingReservations = _reservationRepository.GetConflictingReservationsForRoom(reservation.RoomId, command.NewStartTime, command.NewEndTime);
+        
+        if (existingReservations.Any())
             return new GenericCommandResult(false, "This room is already booked for this time", null);
 
         reservation.UpdateTime(command.NewStartTime, command.NewEndTime);
@@ -163,7 +167,7 @@ public class ReservationHandler :
         try
         {
             reservation.Conclued();
-            _reservationRepository.MarkReservationAsCompleted(command.ReservationId);
+            _reservationRepository.UpdateReservation(reservation);
         
             return new GenericCommandResult(true, "Reservation marked as completed successfully", reservation);
         }

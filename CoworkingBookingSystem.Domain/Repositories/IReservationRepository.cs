@@ -6,10 +6,9 @@ public interface IReservationRepository
 {
     void CreateReservation(ReservationEntity reservation);
     void UpdateReservation(ReservationEntity reservation);
-    bool HasConflict(Guid commandRoomId, DateTime commandStartTime, DateTime commandEndTime);
     ReservationEntity GetReservationForUserById(Guid ReservationId, Guid UserId);
-    List<ReservationEntity> GetReservationsByUser(Guid UserId);
-    List<ReservationEntity> GetFutureReservationsForRoom(Guid RoomId);
-    void MarkReservationAsCompleted(Guid ReservationId);
+    IEnumerable<ReservationEntity> GetReservationsByUser(Guid UserId);
+    IEnumerable<ReservationEntity> GetFutureReservationsForRoom(Guid RoomId);
+    IEnumerable<ReservationEntity> GetConflictingReservationsForRoom(Guid RoomId, DateTime StartTime, DateTime EndTime);
 
 }
