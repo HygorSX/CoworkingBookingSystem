@@ -34,8 +34,8 @@ public sealed class CreateReservationHandlerTests
         var roomToCreateReservation = new RoomEntity("roomTest", Guid.NewGuid());
         _roomRepository.CreateRoom(roomToCreateReservation);
         
-        _invalidCommand = new CreateReservationCommand(Guid.Empty, Guid.Empty, DateTime.Now, DateTime.Now.AddHours(-1));
-        _validCommand = new CreateReservationCommand(userToCreateReservation.Id, roomToCreateReservation.Id, DateTime.Now.AddHours(3), DateTime.Now.AddHours(6));
+        _invalidCommand = new CreateReservationCommand(Guid.Empty, Guid.Empty, DateTime.UtcNow, DateTime.UtcNow.AddHours(-1));
+        _validCommand = new CreateReservationCommand(userToCreateReservation.Id, roomToCreateReservation.Id, DateTime.UtcNow.AddHours(3), DateTime.UtcNow.AddHours(6));
     }
 
     [TestMethod]
@@ -48,7 +48,7 @@ public sealed class CreateReservationHandlerTests
     [TestMethod]
     public void Given_a_valid_command_but_nonexistent_user_it_should_fail()
     {
-        var command = new CreateReservationCommand(Guid.NewGuid(), Guid.NewGuid(), DateTime.Now.AddHours(3), DateTime.Now.AddHours(6));
+        var command = new CreateReservationCommand(Guid.NewGuid(), Guid.NewGuid(), DateTime.UtcNow.AddHours(3), DateTime.UtcNow.AddHours(6));
         var result = (GenericCommandResult)_reservationHandler.Handle(command);
 
         Assert.IsFalse(result.Success, "Reservation creation should fail when user is not found.");
@@ -61,7 +61,7 @@ public sealed class CreateReservationHandlerTests
         var user = new UserEntity("user", "user@gmail.com", "user12345", EUserType.Common);
         _userRepository.Create(user);
 
-        var command = new CreateReservationCommand(user.Id, Guid.NewGuid(), DateTime.Now.AddHours(3), DateTime.Now.AddHours(6));
+        var command = new CreateReservationCommand(user.Id, Guid.NewGuid(), DateTime.UtcNow.AddHours(3), DateTime.UtcNow.AddHours(6));
         var result = (GenericCommandResult)_reservationHandler.Handle(command);
 
         Assert.IsFalse(result.Success, "Reservation creation should fail when room is not found.");
@@ -77,10 +77,10 @@ public sealed class CreateReservationHandlerTests
         var room = new RoomEntity("Room A", Guid.NewGuid());
         _roomRepository.CreateRoom(room);
 
-        var existingReservation = new ReservationEntity(user.Id, room.SpaceId, room.Id, DateTime.Now.AddHours(3), DateTime.Now.AddHours(6));
+        var existingReservation = new ReservationEntity(user.Id, room.SpaceId, room.Id, DateTime.UtcNow.AddHours(3), DateTime.UtcNow.AddHours(6));
         _reservationRepository.CreateReservation(existingReservation);
 
-        var command = new CreateReservationCommand(user.Id, room.Id, DateTime.Now.AddHours(3), DateTime.Now.AddHours(6));
+        var command = new CreateReservationCommand(user.Id, room.Id, DateTime.Now.AddHours(3), DateTime.UtcNow.AddHours(6));
         var result = (GenericCommandResult)_reservationHandler.Handle(command);
 
         Assert.IsFalse(result.Success, "Reservation creation should fail when there is a scheduling conflict.");

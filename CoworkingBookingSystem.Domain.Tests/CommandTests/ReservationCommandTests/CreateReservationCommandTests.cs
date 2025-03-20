@@ -12,8 +12,8 @@ public sealed class CreateReservationCommandTests
     [TestInitialize]
     public void Setup()
     {
-        _invalidCommand = new CreateReservationCommand(Guid.Empty, Guid.Empty, DateTime.Now, DateTime.Now.AddHours(-1));
-        _validCommand = new CreateReservationCommand(Guid.NewGuid(), Guid.NewGuid(), DateTime.Now, DateTime.Now.AddHours(2));
+        _invalidCommand = new CreateReservationCommand(Guid.Empty, Guid.Empty, DateTime.UtcNow, DateTime.UtcNow.AddHours(-3));
+        _validCommand = new CreateReservationCommand(Guid.NewGuid(), Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow.AddHours(6));
     }
 
     [TestMethod]
