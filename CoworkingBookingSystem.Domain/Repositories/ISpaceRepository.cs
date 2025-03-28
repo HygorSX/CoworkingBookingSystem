@@ -8,5 +8,6 @@ public interface ISpaceRepository
     void UpdateSpace(SpaceEntity space);
     void DeleteSpace(SpaceEntity space);
     SpaceEntity GetSpaceById(Guid spaceId);
+    SpaceEntity GetSpaceByName(string name);
     IEnumerable<SpaceEntity> GetAllSpaces();
 }

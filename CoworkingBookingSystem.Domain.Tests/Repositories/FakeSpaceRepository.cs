@@ -30,6 +30,11 @@ public class FakeSpaceRepository : ISpaceRepository
         return _spaces.Find(r => r.Id == spaceId);
     }
 
+    public SpaceEntity GetSpaceByName(string name)
+    {
+        throw new NotImplementedException();
+    }
+
     public IEnumerable<SpaceEntity> GetAllSpaces()
     {
         throw new NotImplementedException();

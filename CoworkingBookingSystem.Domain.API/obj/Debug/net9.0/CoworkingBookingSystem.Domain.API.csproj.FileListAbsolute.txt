@@ -36,3 +36,15 @@ C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Do
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.dll
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.pdb
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.API\obj\Debug\net9.0\CoworkingBookingSystem.Domain.API.sourcelink.json

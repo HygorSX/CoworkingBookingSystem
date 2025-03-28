@@ -1,9 +1,13 @@
-﻿namespace CoworkingBookingSystem.Domain.Entities;
+﻿using System.Text.Json.Serialization;
+
+namespace CoworkingBookingSystem.Domain.Entities;
 
 public class RoomEntity : Entity
 {
     public string Name { get; private set; }
     public Guid SpaceId { get; private set; }
+    
+    [JsonIgnore]
     public SpaceEntity Space { get; private set; }
 
     protected RoomEntity() { }

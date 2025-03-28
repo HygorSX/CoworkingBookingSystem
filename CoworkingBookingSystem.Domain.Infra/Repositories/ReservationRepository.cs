@@ -19,6 +19,7 @@ public class ReservationRepository : IReservationRepository
     {
         return _db.Reservations
             .AsNoTracking()
+            .Where(ReservationQueries.GetReservationForUserById(ReservationId, UserId))
             .FirstOrDefault(r => r.UserId == UserId && r.Id == ReservationId);
     }
 

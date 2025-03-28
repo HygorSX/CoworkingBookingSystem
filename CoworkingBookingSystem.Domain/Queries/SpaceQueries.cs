@@ -9,6 +9,11 @@ public static class SpaceQueries
     {
         return x => x.Id == id;
     }
+    
+    public static Expression<Func<SpaceEntity, bool>> GetSpaceByName(string name)
+    {
+        return x => x.Name == name;
+    }
 
     public static Expression<Func<SpaceEntity, bool>> GetAllSpaces()
     {

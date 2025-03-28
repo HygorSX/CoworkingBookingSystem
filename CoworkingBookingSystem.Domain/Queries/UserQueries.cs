@@ -14,4 +14,9 @@ public static class UserQueries
     {
         return u => u.Id == userId;
     }
+
+    public static Expression<Func<UserEntity, bool>> GetAll()
+    {
+        return u => true;
+    }
 }

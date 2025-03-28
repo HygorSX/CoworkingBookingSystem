@@ -23,7 +23,7 @@ public class SpaceRepository : ISpaceRepository
 
     public void UpdateSpace(SpaceEntity space)
     {
-        _db.Entry(space).State = EntityState.Modified;
+        _db.Spaces.Update(space);
         _db.SaveChanges();
     }
 
@@ -36,13 +36,25 @@ public class SpaceRepository : ISpaceRepository
     public SpaceEntity GetSpaceById(Guid spaceId)
     {
         return _db.Spaces
-                .AsNoTracking()
-                .FirstOrDefault(s => s.Id == spaceId);
+            .Include(s => s.Rooms) 
+            .Where(SpaceQueries.GetSpaceById(spaceId))
+            .FirstOrDefault(s => s.Id == spaceId);
+    }
+
+    public SpaceEntity GetSpaceByName(string name)
+    {
+        return _db.Spaces
+            .Include(s => s.Rooms) 
+            .AsNoTracking()
+            .Where(SpaceQueries.GetSpaceByName(name))
+            .OrderBy(s => s.Name)
+            .FirstOrDefault();
     }
 
     public IEnumerable<SpaceEntity> GetAllSpaces()
     {
         return _db.Spaces
+            .Include(s => s.Rooms) 
             .AsNoTracking()
             .Where(SpaceQueries.GetAllSpaces())
             .OrderBy(s => s.Name);

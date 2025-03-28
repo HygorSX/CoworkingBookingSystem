@@ -1,5 +1,6 @@
 ﻿using CoworkingBookingSystem.Domain.Entities;
 using CoworkingBookingSystem.Domain.Infra.Contexts;
+using CoworkingBookingSystem.Domain.Queries;
 using CoworkingBookingSystem.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,8 +25,17 @@ public class UserRepository : IUserRepository
     public UserEntity GetByEmail(string email)
     {
         return _db.Users
+            .AsNoTracking()
+            .Where(UserQueries.GetByEmail(email))
+            .FirstOrDefault();
+    }
+
+    public IEnumerable<UserEntity> GetAll()
+    {
+        return _db.Users
                 .AsNoTracking()
-                .FirstOrDefault(u => u.Email == email);
+                .Where(UserQueries.GetAll())
+                .OrderBy(u => u.Name);
     }
 
     public void Create(UserEntity user)

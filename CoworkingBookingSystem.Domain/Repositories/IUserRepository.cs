@@ -6,6 +6,7 @@ public interface IUserRepository
 {
     UserEntity GetById(Guid userId);
     UserEntity GetByEmail(string email);
+    IEnumerable<UserEntity> GetAll();
     void Create(UserEntity user);
     void Delete(UserEntity user);
 }

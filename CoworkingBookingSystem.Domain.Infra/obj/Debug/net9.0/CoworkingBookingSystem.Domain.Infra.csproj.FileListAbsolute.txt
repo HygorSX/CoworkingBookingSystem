@@ -13,3 +13,6 @@ C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Do
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.pdb
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.csproj.AssemblyReference.cache
 C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\Coworkin.53A41C7D.Up2Date
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\bin\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.runtimeconfig.json
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.sourcelink.json
+C:\Users\Hygorsxx\RiderProjects\CoworkingBookingSystem\CoworkingBookingSystem.Domain.Infra\obj\Debug\net9.0\CoworkingBookingSystem.Domain.Infra.genruntimeconfig.cache

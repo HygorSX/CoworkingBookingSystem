@@ -31,6 +31,9 @@ public class SpaceHandler :
         if (!command.IsValid)
             return new GenericCommandResult(false, "Ops, something went wrong!", command.Notifications);
 
+        if(_spaceRepository.GetSpaceByName(command.Name) != null)
+            return new GenericCommandResult(false, "Space already exists", null);
+        
         var space = new SpaceEntity(command.Name);
         
         foreach (var roomName in command.RoomNames)
@@ -52,6 +55,9 @@ public class SpaceHandler :
             return new GenericCommandResult(false, "Ops, something went wrong!", command.Notifications);
         
         var space = _spaceRepository.GetSpaceById(command.SpaceId);
+        
+        if(_spaceRepository.GetSpaceByName(command.Name) != null)
+            return new GenericCommandResult(false, "There is already a space with this name", null);
         
         if (space == null)
             return new GenericCommandResult(false, "Space not found", null);

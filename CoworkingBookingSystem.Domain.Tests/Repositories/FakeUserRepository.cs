@@ -17,6 +17,11 @@ public class FakeUserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
+    public IEnumerable<UserEntity> GetAll()
+    {
+        throw new NotImplementedException();
+    }
+
     public void Create(UserEntity user)
     {
         _users.Add(user);
